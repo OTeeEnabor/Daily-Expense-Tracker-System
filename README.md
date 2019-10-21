@@ -15,4 +15,4 @@
 *	Add Special Expense(Expense which will be refunded to again)
 
 ## Application:
-This system will be used by House-Wife to control their Income-Expense from Day-to-Day to Yearly Basics. And to keep a watch on their expense. 
+This system will be used to control their Income-Expense from Day-to-Day to Yearly Basics. And to keep a watch on their expense. 
