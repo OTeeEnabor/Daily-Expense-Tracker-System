@@ -4,15 +4,13 @@ session_start();
 
 //check if the user is logged in, if they are not then refirect them to the login page. 
 
-require_once 'function/functions.php';
-// isUserLoggedin();
 
 // Check if the user is logged in, if not then redirect to login page
 if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"] !== true){
     header("location: login.php");
     exit;
 }
-require_once "config/conn.php";
+require_once "../config/conn.php";
 
 $new_password = $confirm_password = "";
 $new_password_err = $confirm_password_err = "";
@@ -47,7 +45,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         //prepare an update statement
     
-        $sql = "UPDATE users SET password = :password WHERE id = :id";
+        $sql = "UPDATE users_table SET Password = :password WHERE userID = :id";
 
         //change the password stored in the database in the row associated with the user id logged in. 
 

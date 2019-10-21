@@ -19,7 +19,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         $username_err = "Please enter a username.";
     } else{
         //prepare a select statement
-        $sql = "SELECT id FROM users WHERE username = :username";
+        $sql = "SELECT userID FROM users_table WHERE Username = :username";
         if($stmt = $pdo->prepare($sql)){
 
         $stmt->bindParam(":username",$param_username,PDO::PARAM_STR);
@@ -68,7 +68,7 @@ if(!$validate_password){
 if(empty($username_err)&& empty($password_err)&& empty($confirm_password_err)){
     //prepare an insert statement
 
-    $sql = "INSERT INTO users (username, password) VALUES(:username,:password)";
+    $sql = "INSERT INTO users_table (Username, Password) VALUES(:username,:password)";
 
     if ($stmt = $pdo->prepare($sql)){
         //Bind variables to the prepared statement as parameters

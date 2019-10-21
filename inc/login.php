@@ -43,7 +43,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         // the error variables should be empty for a succesfful log in.
 
         //Prepare a selct statement
-        $sql = "SELECT id, username, password FROM users WHERE username = :username";
+        $sql = "SELECT userID, Username, Password FROM users_table WHERE Username = :username";
         
         if($stmt=$pdo->prepare($sql)){
             
@@ -59,17 +59,17 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
             if($stmt->execute()){
                 //the prepared statement was successfully executed
                 //if the resource was succesfully created, and the number of rows is equla to 1.  now verify the password
-                var_dump($username);
+                
 
                 if($stmt->rowCount() == 1){
 
                     if($data = $stmt->fetch()){
 
-                        $user_id = $data["id"];
+                        $user_id = $data["userID"];
 
-                        $username = $data["username"];
+                        $username = $data["Username"];
 
-                        $hashed_password = $data["password"];
+                        $hashed_password = $data["Password"];
 
                         if(password_verify($password,$hashed_password)){
                           //Correct password if true

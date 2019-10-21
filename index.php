@@ -6,8 +6,9 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
     header("location: inc/login.php");
     exit;
 }
-
+echo "hello".$_SESSION["username"];
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -17,6 +18,6 @@ if(!isset($_SESSION["loggedin"]) || $_SESSION["loggedin"]!== true){
     <title>FIRE|| Tracker</title>
 </head>
 <body>
-    
+    knkkn
 </body>
 </html>
