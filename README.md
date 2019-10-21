@@ -5,8 +5,8 @@
 > This System takes your income and divides it by your daily expense allowed, if you exceed that day's expense it will cut if from your income and give new daily expense allowed amount, and if that day's expense is less it will add it into savings. Daily expense tracking System will generate report at the end of month to show Income-Expense Curve. It will let you add the savings amount which you have saved to  some particular festivals or day like a birthday or anniversary.
 
 ## Modules:
-*	User (House-Wife) Login.
-*	User (House-Wife) Register. 
+*	User  Login.
+*	User  Register. 
 *	Add Expense.
 *	Add Income.
 *	View Income-Expense Curve.
